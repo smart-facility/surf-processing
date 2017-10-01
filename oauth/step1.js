@@ -14,18 +14,18 @@ var oauth = OAuth({
     }
 });
 
-var request_data = {
-    url: 'https://www.alpinereplay.com/api/oauth_init',
+var request_params = {
+    url: 'https://surf.alpinereplay.com/api/oauth_init',
     method: 'POST',
     data: {
-        status: 'Hello world'
+        oauth_callback: process.env.CALLBACK_URL
     }
 };
 
 request({
-    url: request_data.url,
-    method: request_data.method,
-    form: oauth.authorize(request_data, {})
+    url: request_params.url,
+    method: request_params.method,
+    form: oauth.authorize(request_params, {})
 }, function(error, response, body) {
     console.log(response);
     console.log(body);
