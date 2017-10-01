@@ -15,7 +15,7 @@ var oauth = OAuth({
 });
 
 var request_params = {
-    url: 'https://surf.alpinereplay.com/api/oauth_init',
+    url: 'https://www.alpinereplay.com/api/oauth_init',
     method: 'POST',
     data: {
         oauth_callback: process.env.CALLBACK_URL
